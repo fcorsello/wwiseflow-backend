@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "createSound",
+      "data": {
+        "name": "MyCoolSfx_${HHmmss}",
+        "parentPath": "/Actor-Mixer Hierarchy/Default Work Unit"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "audioImport",
+      "data": {
+        "sourceNode": "n1",
+        "filePath": "C:/temp/TestTone.wav",
+        "language": "SFX"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "setReference",
+      "data": {
+        "sourceNode": "n1",
+        "reference": "OutputBus",
+        "valuePath": "/Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "projectSave",
+      "data": {}
+    }
+  ]
+}
